@@ -2,32 +2,55 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Текст по центру</title>
+    <title>Текст по центру сверху</title>
     <style>
         body {
             margin: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            align-items: center;         /* центр по горизонтали */
+            justify-content: flex-start; /* прижатие к верху */
+            padding-top: 60px;
             font-family: Arial, sans-serif;
             text-align: center;
+            box-sizing: border-box;
         }
 
         h1 {
-            margin-bottom: 20px;
+            margin: 0 0 20px;
         }
 
         p {
             max-width: 600px;
             font-size: 18px;
             color: #333;
+            margin: 0;
+        }
+
+        .back-button {
+            position: fixed;   /* фиксируем в углу */
+            top: 20px;
+            left: 20px;
+            padding: 10px 18px;
+            background-color: #5865F2; /* фирменный цвет Discord */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.2s ease;
+        }
+
+        .back-button:hover {
+            background-color: #4752c4;
         }
     </style>
 </head>
 <body>
+    <a href="https://docs.discord-catbot.ru" class="back-button">← Назад</a>
+
     <h1>Заголовок</h1>
-    <p>Это простой текст, который отображается по центру страницы.</p>
+    <p>Это простой текст, который расположен по центру по горизонтали и сверху по вертикали.</p>
 </body>
 </html>
